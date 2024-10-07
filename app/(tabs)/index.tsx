@@ -7,25 +7,24 @@ import { Image,
   TouchableOpacity,
 } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
+import {useState} from 'react';
+
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+import Header from "@/components/game/Header";
+import GameBoard from "@/components/game/GameBoard";
+
 export default function HomeScreen() {
 
-
+  const [wrongFlips, setWrongFlips] = useState(0);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-
-
+      >
+      <Header wrongFlips={wrongFlips} />
+      <GameBoard setWrongFlips={setWrongFlips} />
     </ParallaxScrollView>
   );
 }
