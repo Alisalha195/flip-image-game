@@ -1,5 +1,5 @@
 {
-  "name": "learn-ract-native-app",
+  "name": "flip-image",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {

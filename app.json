@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "learn-ract-native-app",
-    "slug": "learn-ract-native-app",
+    "name": "flip-image",
+    "slug": "flip-image",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
