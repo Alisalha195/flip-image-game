@@ -1,6 +1,15 @@
 import {shuffle} from "@/lib/actions" ;
 
-export const images = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg','16.jpg'];
+export const images = ['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'];
 
-export const shuffeledImages = shuffle(images);
 
+
+
+export const getShuffledImages = () => {
+	const shuffledBase = shuffle(images);
+	const shuffledCopy = shuffle(images);
+	const shuffeledImagesToUse = [...shuffledBase , ...shuffledCopy];
+
+	const shuffeledImagesObjectToUse = [shuffeledImagesToUse.map((item,index)=> ({id:index , name:item}))]
+	return shuffeledImagesToUse;
+}

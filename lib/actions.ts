@@ -1,8 +1,10 @@
 
 
-export const shuffle(array) {
+export const shuffle = (array)=> {
   
   let arrayToShuffel = new Array(...array)
+  
+
   let currentIndex = arrayToShuffel.length;
 
   // While there remain elements to shuffle...
@@ -16,4 +18,7 @@ export const shuffle(array) {
     [arrayToShuffel[currentIndex], arrayToShuffel[randomIndex]] = [
       arrayToShuffel[randomIndex], arrayToShuffel[currentIndex]];
   }
+
+  return arrayToShuffel;
+
 }
