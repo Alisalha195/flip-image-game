@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 
-const ImageSrc = ({ src }) => {
+const ImageCard = ({ src }) => {
   return (
     <View style={styles.container}>
       <Image src={src} style={styles.image} />
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
     
   }
 });
-export default ImageSrc;
+export default ImageCard;
